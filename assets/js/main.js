@@ -88,11 +88,7 @@
 
 
 	$('.product-pic-zoom').zoom();
-
 	
-
-
-
 	function cartItemsInit() {
 		if (localStorage.getItem('cartItems')) {
 			console.log('Storage downloaded')		} 

@@ -179,7 +179,7 @@ ol {
 	box-shadow: inset 0 0 0 1px #111111;
 }
 
-.add-to-cart_block {
+button.add-to-cart_btn {
 	margin-top: 20px;
 }
 
@@ -1423,6 +1423,7 @@ form textarea {
 
 .cart-table .size-col h4,
 .cart-table .total-col h4 {
+	display: inline-block;
 	font-size: 18px;
 	color: #414141;
 	font-weight: 400;
@@ -1507,6 +1508,8 @@ form textarea {
 
 .quantity .pro-qty {
 	width: 94px;
+
+
 	height: 36px;
 	border: 1px solid #ddd;
 	padding: 0 15px;
@@ -1526,7 +1529,7 @@ form textarea {
 }
 
 .quantity .pro-qty input {
-	width: 28px;
+	width: 50px;
 	float: left;
 	border: none;
 	height: 36px;
