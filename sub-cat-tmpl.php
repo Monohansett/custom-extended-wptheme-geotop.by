@@ -12,7 +12,7 @@
 </div>
 <section class="product-filter-section">
 	<div class="container">
-		<div class="section-title" style="padding-top: 30px;">
+		<div class="section-title" style="padding-top: 30px; padding-bottom: 20px;">
 			<h2>
 				<?php echo $subcat->name ?>
 			</h2>
@@ -24,18 +24,26 @@
 					if ( have_posts() ){
 						while ( have_posts() ){
 							the_post();
-					?>
-					<div class="col-lg-3 col-sm-6">
-						<div class="product-item">
-							<div class="pi-pic">
-								<a href="<?php the_permalink() ?>">
-									<?php the_post_thumbnail('product-preview', '') ?>
-								</a>
+							foreach ($posts as $post) {
+								?>
+								<div class="col-lg-3 col-sm-6">
+									<div class="product-item">
+										<div class="pi-pic subcat-preview">
+											<a href="<?php the_permalink() ?>">
+												<?php the_post_thumbnail('product-preview', '') ?>
+											</a>
+										</div>
+										<div class="pi-text text-center">
+											<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+									</div>
+								</div>
 							</div>
-							<div class="pi-text text-center">
-								<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-						</div>
-					</div>
+								<?php
+							}
+							wp_reset_postdata();
+					?>
+					
+					
 					<?php
 					}
 					} else {

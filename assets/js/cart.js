@@ -16,7 +16,7 @@ $(function () {
 	} else {
 		$('.cart-table-warp').hide();
 		$('div.total-cost').hide();
-		$('.contact-form').hide()
+		$('#wpcf7-f766-o1').hide()
 		$('.cart-table h3').append('<h4 style="margin-top:50px">' + "Ваша корзина пуста" + '</h4')
 
 	}
@@ -45,7 +45,7 @@ $(function () {
 		setTimeout(() => {
 			$('.cart-table-warp').hide();
 			$('div.total-cost').hide();
-			$('.contact-form').hide()
+			$('#wpcf7-f766-o1').hide()
 			$('.cart-table h3').append('<h4 style="margin-top:50px">' + "Ваша корзина пуста" + '</h4')
 		}, 100)
 

@@ -25,7 +25,7 @@ Template Post Type: post;
 		<div class="row">
 			<div class="col-lg-12 col-sm-12">
 				<div class="news-item">
-					<div class="pi-pic">
+					<div class="pi-pic ">
 						<?php the_post_thumbnail( 'news-main-img',  $size = array(1370,500), $attr = '' ) ?>
 					</div>
 					<div class="pi-text">

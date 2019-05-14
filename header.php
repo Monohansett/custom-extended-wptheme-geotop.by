@@ -22,32 +22,47 @@
 	<header class="header-section">
 		<div class="container-fluid bg_header">
 			<div class="container">
-				<ul class="top-header__menu">
-					<?php $args = array(
-					'depth'        => 0,
-					// 'show_date'    => '',
-					// 'date_format'  => get_option('date_format'),
-					'child_of'     => 0,
-					'exclude'      => '',
-					'exclude_tree' => '',
-					'include'      => '47,55,51,53',
-					'title_li'     => NULL,
-					'echo'         => 1,
-					'authors'      => '',
-					'sort_column'  => 'menu_order, post_title',
-					'sort_order'   => 'ASC',
-					'link_before'  => '',
-					'link_after'   => '',
-					'meta_key'     => '',
-					'meta_value'   => '',
-					'number'       => '',
-					'offset'       => '',
-					'walker'       => '',
-					'post_type'    => 'page', // из функции get_pages()
-					);
-					wp_list_pages( $args ); ?>
-				</ul>
+				<div class="row">
+					<ul class="top-header__menu col-lg-10">
+						<?php $args = array(
+						'depth'        => 0,
+						// 'show_date'    => '',
+						// 'date_format'  => get_option('date_format'),
+						'child_of'     => 0,
+						'exclude'      => '',
+						'exclude_tree' => '',
+						'include'      => '47,51,53,18',
+						'title_li'     => NULL,
+						'echo'         => 1,
+						'authors'      => '',
+						'sort_column'  => 'menu_order',
+						'sort_order'   => 'ASC',
+						'link_before'  => '',
+						'link_after'   => '',
+						'meta_key'     => '',
+						'meta_value'   => '',
+						'number'       => '',
+						'offset'       => '',
+						'walker'       => '',
+						'post_type'    => 'page', // из функции get_pages()
+						);
+						wp_list_pages( $args ); ?>
+					</ul>
+					<div class="col-lg-2 text-right">
+						<div class="shop-panel">
+							
+							<div class="up-item">
+								<div class=" go-to-cart_block">
+									<i class="flaticon-shopping-cart"></i>
+									<span>0</span>
+								</div>
+								<a href="/cart">Корзина</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+
 		</div>
 		<div class="header-top">
 			<div class="container">
@@ -60,7 +75,7 @@
 					<div class="col-lg-auto col-md-auto contacts">
 						<span class="contacts-item"><a href="tel: <?php the_field('tel_fax_link', 37) ?>"><?php the_field('tel_fax', 37) ?></a></span>
 						<span class="contacts-item"><a href="tel: <?php the_field('tel_mob_link', 37) ?>"><?php the_field('tel_mob', 37) ?></a></span>
-						<span class="contacts-item">info@geotop.by</span>
+						<span class="contacts-item"><a href="mailto: info@geotop.by ?>">info@geotop.by</a></span>
 					</div>
 				</div>
 			</div>
@@ -74,7 +89,7 @@
 						<?php get_sidebar( 'catalog' ) ?>
 					</li>
 					<li><a href="/stocks">Акции</a></li>
-					<li><a href="/price">Цены</a></li>
+					<li><a href="/rent">Аренда</a></li>
 					<li><a href="/service">Сервис</a>
 					<?php get_sidebar( 'service' ) ?>
 				</li>

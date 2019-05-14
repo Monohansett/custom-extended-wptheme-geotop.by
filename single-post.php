@@ -8,7 +8,6 @@ Template Post Type: post;
 <?php
 	$current_post_obj = get_post('', 'OBJECT', '');
 	$post_data = json_encode((array)$current_post_obj);
-	print_r($post_data);
 	$current_post = get_queried_object();
 	$current_post->ID;
 	$main_image = get_field('product_img');
@@ -63,7 +62,7 @@ Template Post Type: post;
 			<div class="col-lg-7 product-details" style="margin-left:50px;">
 				<h2 class="p-title"><?php the_title() ?></h2>
 				<?php if( $enable_price ): ?>
-				<h5 class="p-title" style="font-weight: bold; padding-top:20px">
+				<h5 class="p-title add-to-cart-notify">
 				
 				<?php if(empty($product_price)) : ?>
 				<?php else : ?>
@@ -71,6 +70,12 @@ Template Post Type: post;
 				<?php endif; ?>
 				</h5>
 				<?php endif; ?>
+				<button class="site-btn add-to-cart_btn">Добавить в корзину</button>
+				<div class="container checkout__block">
+					<button class="site-btn to-cart_btn">Оформить заказ</button>
+					<button class="site-btn to-catalog_btn">К каталогу</button>
+				</div>
+
 				<div id="accordion" class="accordion-area">
 					<div class="panel">
 						<div class="panel-header" id="headingOne">
@@ -143,7 +148,6 @@ Template Post Type: post;
 						</div>
 					</div>
 				</div>
-				<button class="site-btn add-to-cart_btn">Добавить в корзину</button>
 			</div>
 		</div>
 	</div>

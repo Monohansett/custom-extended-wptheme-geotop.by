@@ -23,8 +23,6 @@
 			</h2>
 		</div>
 		<div class="row">
-			<div class="col-lg-12  order-1 order-lg-2 mb-5 mb-lg-0">
-				<div class="row">
 					<?php
 					$parent_id = get_query_var( 'cat', '' );
 					# получаем дочерние рубрики
@@ -48,8 +46,6 @@
 					}
 					?>
 				</div>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col-lg-12  order-1 order-lg-2 mb-5 mb-lg-0">
 				<div class="row">
@@ -71,9 +67,9 @@
 					?>
 					<div class="col-lg-3 col-sm-6" style="padding-top: 15px;">
 						<div class="product-item">
-							<div class="pi-pic">
+							<div class="pi-pic category-preview">
 								<a href="<?php the_permalink() ?>">
-									<?php the_post_thumbnail('product-preview', '') ?>
+									<?php the_post_thumbnail('category-preview', $size = array(310, 336), $attr='') ?>
 								</a>
 							</div>
 							<div class="pi-text text-center">

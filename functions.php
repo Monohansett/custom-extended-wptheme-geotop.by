@@ -29,6 +29,7 @@ function geotop_footer_scripts() {
 	wp_enqueue_script('nicescroll', get_template_directory_uri() . '/assets/js/jquery.nicescroll.min.js', array('jquery'), null, true);
 	wp_enqueue_script('jquery-ui', get_template_directory_uri() . '/assets/js/jquery-ui.min.js', array('jquery'), null, true);
 	wp_enqueue_script('jquery-zoom', get_template_directory_uri() . '/assets/js/jquery.zoom.min.js', array('jquery'), null, true);
+	wp_enqueue_script('notify', get_template_directory_uri() . '/assets/js/notify.min.js', array('jquery'), null, true);
 	wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true);
 }
 
@@ -41,7 +42,7 @@ function init_cart_script() {
 add_theme_support('custom-logo');
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ));
 
-add_image_size( 'product-preview', $width = 264, $height = 336, $crop = true );
+add_image_size( 'product-preview', $width = 264, $height = 336, $crop = false );
 add_image_size('news-preview', $width = 322, $height = 161, $crop = true);
 add_image_size( 'stock-preview', $width = 558, $height = 232, $crop = true );
 add_image_size( 'service-preview', $width = 322, $height = 322, $crop = true );
