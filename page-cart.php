@@ -34,18 +34,12 @@ Template Name: Корзина
 						</table>
 					</div>
 					<div class="total-cost">
-						<h6>Total <span>$99.90</span></h6>
+						<h6>Итого <span>0</span></h6>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 card-right">
-				<form class="contact-form">
-					<input id="company_name" type="text" placeholder="Наименование организации">
-					<input id="payment_reqs" type="text" placeholder="Реквизиты оплаты">
-					<input id="phone" type="phone" placeholder="Телефон" required>
-					<textarea placeholder="Дополнительная информация"></textarea>
-					<button class="site-btn">Оформить</button>
-				</form>
+				<?php echo do_shortcode( '[contact-form-7 id="766" title="Форма отправки заказа"]' ); ?>	
 			</div>
 		</div>
 	</div>

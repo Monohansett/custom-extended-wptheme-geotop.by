@@ -135,6 +135,8 @@
 			$('.go-to-cart_block span').text(cart.length)
 		}
 		else {
+
+			$('.go-to-cart_block span').text('0')
 			const cartItems = [];
 
 			localStorage.setItem('cartItems', JSON.stringify(cartItems))

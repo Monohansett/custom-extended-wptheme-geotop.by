@@ -1517,6 +1517,10 @@ form textarea {
 	padding: 23px 47px 14px;
 }
 
+.order_info .orderData {
+	display: none;
+}
+
 .promo-code-form {
 	position: relative;
 	margin-bottom: 14px;
