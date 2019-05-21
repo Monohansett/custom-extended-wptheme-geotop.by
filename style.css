@@ -278,8 +278,9 @@ div.checkout__block {
 	cursor: pointer;
 	border: none;
 	min-height: 69px;
-	background-color: transparent;
+	background: transparent;
 	border-radius: 0;
+	
 }
 
 .accordion-area .panel-link:focus,
@@ -333,6 +334,76 @@ table td {
 	border: solid 2px #e1e1e1;
 	padding: 5px;
 }
+
+
+.accord-instruction {
+		margin-top: 10px;
+    border-top: 2px solid #e1e1e1;
+}
+
+.accord-instruction .panel {
+	border-bottom: none;
+
+}
+
+.accord-instruction .panel-link,
+.accord-instruction .panel-link.active.collapsed {
+	text-align: left;
+	position: relative;
+	width: 100%;
+	font-size: 18px;
+	font-weight: normal;
+	color: #414141;
+	padding: 0;
+	text-transform: uppercase;
+	line-height: 1;
+	cursor: pointer;
+	border: none;
+	min-height: 34px;
+	background-color: transparent;
+	border-radius: 0;
+	padding-left: 15px;
+}
+
+.accord-instruction .panel-link {
+	background-image: url("img/arrow-down.png");
+	background-repeat: no-repeat;
+	background-position: right 10px top 15px;
+}
+
+.accord-instruction .panel-header .panel-link.collapsed {
+	background-image: url("img/arrow-down.png");
+	background-repeat: no-repeat;
+	background-position: right 10px top 15px;
+
+}
+
+.accord-instruction .panel-link.active {
+	background-image: url("img/arrow-up.png");
+	background-repeat: no-repeat;
+}
+
+.accord-instruction .panel-body {
+	margin-left: 14px;
+	margin-bottom: -30px;
+}
+
+.accord-instruction .panel-body a {
+	color: #ea091f;
+}
+
+
+
+.accord-instruction .panel-header {
+	background: gainsboro;
+}
+
+
+.instruction-title {
+	margin-top: 15px;
+}
+
+
 /*------------------
   Header section
 ---------------------*/
