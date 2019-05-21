@@ -299,12 +299,6 @@ div.checkout__block {
 	line-height: 1.8;
 }
 
-.accordion-area .panel-body p span {
-	font-size: 12px;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #f51167;
-}
 
 .accordion-area .panel-body span a {
 	text-decoration: none;
@@ -385,11 +379,17 @@ table td {
 
 .accord-instruction .panel-body {
 	margin-left: 14px;
-	margin-bottom: -30px;
+	margin-bottom: -20px;
 }
 
-.accord-instruction .panel-body a {
+.accordion-area .panel-body span a {
+	display: block;
 	color: #ea091f;
+}
+
+.accordion-area .panel-body span a:hover {
+	text-decoration: none;
+	color: #000;
 }
 
 

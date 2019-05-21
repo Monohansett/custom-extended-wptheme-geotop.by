@@ -58,21 +58,31 @@ Template Post Type: post;
                                 <div id="<?php echo 'collapse' . $post->ID ?>" class="collapse" aria-labelledby="headingOne"
                                     data-parent="#accordion">
                                     <div class="panel-body">
-                                        <a href="<?php echo the_field('instr_link') ?>">
-                                            <?php echo the_field('instr_title') ?>
-                                        </a> <br>
-                                        <a href="<?php echo the_field('instr_link_2') ?>">
-                                            <?php echo the_field('instr_title_2') ?>
-                                        </a> <br>
-                                        <a href="<?php echo the_field('instr_link_3') ?>">
-                                            <?php echo the_field('instr_title_3') ?>
-                                        </a> <br>
-                                        <a href="<?php the_field('instr_link_4') ?>">
-                                            <?php echo the_field('instr_title_4') ?>
-                                        </a> <br>
-                                        <a href="<?php the_field('instr_link_5') ?>">
-                                            <?php echo the_field('instr_title_5') ?>
-                                        </a>		
+                                        <span>
+                                            <a href="<?php echo the_field('instr_link') ?>">
+                                                <?php echo the_field('instr_title') ?>
+                                            </a>
+                                        </span>
+                                        <span >
+                                            <a href="<?php echo the_field('instr_link_2') ?>">
+                                                <?php echo the_field('instr_title_2') ?>
+                                            </a>
+                                        </span>
+                                        <span>
+                                            <a href="<?php echo the_field('instr_link_3') ?>">
+                                                <?php echo the_field('instr_title_3') ?>
+                                            </a>
+                                        </span>
+                                        <span>
+                                            <a href="<?php the_field('instr_link_4') ?>">
+                                                <?php echo the_field('instr_title_4') ?>
+                                            </a>
+                                        </span>
+                                        <span>
+                                            <a href="<?php the_field('instr_link_5') ?>">
+                                                <?php echo the_field('instr_title_5') ?>
+                                            </a>
+                                        </span>    		
                                     </div>
                                 </div>
                             </div>
