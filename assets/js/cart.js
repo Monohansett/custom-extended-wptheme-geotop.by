@@ -9,7 +9,7 @@ $(function () {
 
 	if (cart.length > 0) {
 		cart.map((cartItem, index) => {
-			cartTable.append('<tr class="cart-row" value="' + index + '">' + '<td class="product-col">' + '<img src="' + cartItem.postThumb + '">' + '<div class="pc-title">' + '<h4>' + cartItem.post_title + '</h4>' + '</div>' + '</td>' + '<td class="quy-col">' + '<div class="quantity">' + '<div class="pro-qty">' + '<input type="number" value="1">' + '</div>' + '</div>' + '</td>' + '<td class="total-col">' + '<h4>' + (cartItem.price ? cartItem.price : '-') + '</h4>' + '<span>' + ' BYN' + '</span>' + '</td>' + '<td class="size-col">' + '<h4>' + '<i class="flaticon-garbage remove_btn">' + '</i>' + '</h4>' + '</td>')
+			cartTable.append('<tr class="cart-row" value="' + index + '">' + '<td class="product-col">' + '<img src="' + cartItem.postThumb + '">' + '<div class="pc-title">' + '<h4>' + cartItem.post_title + '</h4>' + '</div>' + '</td>' + '<td class="quy-col">' + '<div class="quantity">' + '<div class="pro-qty">' + '<input type="number" min="1" value="1">' + '</div>' + '</div>' + '</td>' + '<td class="total-col">' + '<h4>' + (cartItem.price ? cartItem.price : '-') + '</h4>' + '<span>' + ' BYN' + '</span>' + '</td>' + '<td class="size-col">' + '<h4>' + '<i class="flaticon-garbage remove_btn">' + '</i>' + '</h4>' + '</td>')
 
 		})
 		sumTotalPrice()
@@ -26,6 +26,14 @@ $(function () {
 	// change price by quantity
 
 	$('.pro-qty input').on('change', formOrderData);
+
+	$('.pro-qty input').on('keydown', function(e){
+		if(!((e.keyCode > 95 && e.keyCode < 106)
+		|| (e.keyCode > 47 && e.keyCode < 58) 
+		|| e.keyCode == 8)) {
+			return false;
+		}
+	})
 
 	// Delete cart item
 
