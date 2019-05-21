@@ -24,12 +24,12 @@ Template Post Type: post;
 
         <?php
 
-            
-
             $parent_id = 26;
             $sub_cats = get_categories( array(
                 'child_of' => $parent_id,
-                'hide_empty' => 0
+                'hide_empty' => 0,
+                'orderby' => 'ID',
+                'order' => 'ASC'
             ) );
             if( $sub_cats ){
                 foreach( $sub_cats as $cat ){
@@ -48,9 +48,6 @@ Template Post Type: post;
                     global $post;
                     foreach($myposts as $post){
                         setup_postdata($post);
-                        $instr_link = get_field('instr_link');
-                        $instr_link_2 = get_field('instr_link_2');
-                        $instr_link_3 = get_field('instr_link_3');
                         ?> 
                         <div id="accordion" class="accordion-area accord-instruction">
                             <div class="panel">
